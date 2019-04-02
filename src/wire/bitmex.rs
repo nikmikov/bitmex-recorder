@@ -1,6 +1,7 @@
 use chrono::prelude::*;
 use serde::{Deserialize, Serialize};
 use std::fmt::Display;
+use uuid::Uuid;
 
 #[derive(Serialize, Deserialize, Debug, Display)]
 #[serde(rename_all = "camelCase")]
@@ -80,7 +81,7 @@ pub enum TableRow {
         price: f64,
         tick_direction: TickDirection,
         #[serde(rename = "trdMatchID")]
-        trade_match_id: String,
+        trade_match_id: Uuid,
         gross_value: Option<u64>,
         home_notional: Option<f64>,
         foreign_notional: Option<f64>,

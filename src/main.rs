@@ -4,6 +4,7 @@ extern crate chrono;
 extern crate csv;
 extern crate env_logger;
 extern crate ws;
+extern crate uuid;
 
 mod wire;
 use wire::bitmex;
